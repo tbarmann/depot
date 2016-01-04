@@ -9,6 +9,7 @@ class ProductsControllerTest < ActionController::TestCase
       image_url: 'lorem.jpg',
       price: 19.95
     }
+
   end
 
   test "should get index" do
