@@ -18,6 +18,13 @@ class ProductsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:products)
   end
 
+  test "product index page showing page sections" do
+    get :index
+    assert_select 'h1', 'Listing products'
+    assert_select '.products table tr', 3
+  end
+
+
   test "should get new" do
     get :new
     assert_response :success
